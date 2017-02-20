@@ -60,6 +60,13 @@ class JSON::JWT {
 
         my %pack;
         %pack<sigblob> = join('.', @parts[0], @parts[1]).encode('ascii');
+        # MIME::Base64 doesn't do base64url
+        @parts[0] ~~ s:g/\-/+/;
+        @parts[1] ~~ s:g/\-/+/;
+        @parts[2] ~~ s:g/\-/+/;
+        @parts[0] ~~ s:g/_/\//;
+        @parts[1] ~~ s:g/_/\//;
+        @parts[2] ~~ s:g/_/\//;
         %pack<signature> = MIME::Base64.decode(@parts[2]) if @parts[2];
         %pack<header> = from-json(MIME::Base64.decode-str(@parts[0]));
         %pack<body> = from-json(MIME::Base64.decode-str(@parts[1]));
