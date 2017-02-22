@@ -1,2 +1,1 @@
-# P6-JSON-JWT
-JSON::JWT
+# JSON::JWT
