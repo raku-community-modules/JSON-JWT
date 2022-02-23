@@ -1,4 +1,6 @@
 Revision history for JSON::JWT
 
 {{$NEXT}}
+
+1.1  2022-02-23T11:48:10+01:00
     - First version in the zef ecosystem
