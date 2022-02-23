@@ -4,7 +4,7 @@ use OpenSSL::Digest;
 use OpenSSL::RSATools;
 use Digest::HMAC;
 
-unit class JSON::JWT:ver<1.1>:auth<zef:raku-community-modules>;
+unit class JSON::JWT:ver<1.1.1>:auth<zef:raku-community-modules>;
 
 multi method decode($jwt, :$alg where 'none') {
     my %pack := self!unpack($jwt);
@@ -112,13 +112,13 @@ JSON::JWT - JSON Web Token (JWT) implementation for Raku
 
 use JSON::JWT;
 
-my $jwt = encode($data, :alg<none>);             # no encryption
-my $jwt = encode($data, :alg<HS256>, :$secret);  # HS256 encryption
-my $jwt = encode($data, :alg<RS256>, :$pem);     # RS256 encryption
+my $jwt = JSON::JWT.encode($data, :alg<none>);             # no encryption
+my $jwt = JSON::JWT.encode($data, :alg<HS256>, :$secret);  # HS256 encryption
+my $jwt = JSON::JWT.encode($data, :alg<RS256>, :$pem);     # RS256 encryption
 
-my $data = decode($jwt, :alg<none>);             # no encryption
-my $data = decode($jwt, :alg<HS256>, :$secret);  # HS256 encryption
-my $data = decode($jwt, :alg<RS256>, :$pem);     # RS256 encryption
+my $data = JSON::JWT.decode($jwt, :alg<none>);             # no encryption
+my $data = JSON::JWT.decode($jwt, :alg<HS256>, :$secret);  # HS256 encryption
+my $data = JSON::JWT.decode($jwt, :alg<RS256>, :$pem);     # RS256 encryption
 
 =end code
 

@@ -11,13 +11,13 @@ SYNOPSIS
 ```raku
 use JSON::JWT;
 
-my $jwt = encode($data, :alg<none>);             # no encryption
-my $jwt = encode($data, :alg<HS256>, :$secret);  # HS256 encryption
-my $jwt = encode($data, :alg<RS256>, :$pem);     # RS256 encryption
+my $jwt = JSON::JWT.encode($data, :alg<none>);             # no encryption
+my $jwt = JSON::JWT.encode($data, :alg<HS256>, :$secret);  # HS256 encryption
+my $jwt = JSON::JWT.encode($data, :alg<RS256>, :$pem);     # RS256 encryption
 
-my $data = decode($jwt, :alg<none>);             # no encryption
-my $data = decode($jwt, :alg<HS256>, :$secret);  # HS256 encryption
-my $data = decode($jwt, :alg<RS256>, :$pem);     # RS256 encryption
+my $data = JSON::JWT.decode($jwt, :alg<none>);             # no encryption
+my $data = JSON::JWT.decode($jwt, :alg<HS256>, :$secret);  # HS256 encryption
+my $data = JSON::JWT.decode($jwt, :alg<RS256>, :$pem);     # RS256 encryption
 ```
 
 DESCRIPTION
