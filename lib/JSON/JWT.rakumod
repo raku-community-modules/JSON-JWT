@@ -126,7 +126,7 @@ my $data = decode($jwt, :alg<RS256>, :$pem);     # RS256 encryption
 
 JSON::JWT provides a class with an implementation of the
 JSON Web Token (JWT) standard, with support for C<HS256> and
-C<RS256> encryption, or no encryption..
+C<RS256> encryption, or no encryption.
 
 =head1 AUTHOR
 
