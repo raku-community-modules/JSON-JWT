@@ -1,9 +1,7 @@
-use v6;
+use JSON::JWT;
 use Test;
 
 plan 7;
-
-use JSON::JWT;
 
 # jwt.io HS256
 my $test = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ';
@@ -22,3 +20,5 @@ my $pem = slurp 't/pub.pem';
 lives-ok { $rsadecoded = JSON::JWT.decode($rsatest, :alg('RS256'), :$pem) }, 'correct decode succeeds';
 
 is $rsadecoded<sub>, '1234567890', 'Got correct data';
+
+# vim: expandtab shiftwidth=4
