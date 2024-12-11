@@ -1,4 +1,4 @@
-[![Actions Status](https://github.com/raku-community-modules/JSON-JWT/actions/workflows/linux.yml/badge.svg)](https://github.com/raku-community-modules/JSON-JWT/actions) [![Actions Status](https://github.com/raku-community-modules/JSON-JWT/actions/workflows/macos.yml/badge.svg)](https://github.com/raku-community-modules/JSON-JWT/actions) [![Actions Status](https://github.com/raku-community-modules/JSON-JWT/actions/workflows/windows.yml/badge.svg)](https://github.com/raku-community-modules/JSON-JWT/actions)
+[![Actions Status](https://github.com/raku-community-modules/JSON-JWT/actions/workflows/linux.yml/badge.svg)](https://github.com/raku-community-modules/JSON-JWT/actions) [![Actions Status](https://github.com/raku-community-modules/JSON-JWT/actions/workflows/macos.yml/badge.svg)](https://github.com/raku-community-modules/JSON-JWT/actions)
 
 NAME
 ====
