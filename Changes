@@ -1,6 +1,7 @@
 Revision history for JSON::JWT
 
 {{$NEXT}}
+    - Add CI badges for each OS
 
 1.1.1  2022-02-23T12:52:18+01:00
     - Fix pod: encode/decode are methods, not subs!

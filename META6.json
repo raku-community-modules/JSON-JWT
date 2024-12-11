@@ -19,7 +19,7 @@
   "resources": [
   ],
   "source-type": "git",
-  "source-url": "git://github.com/retupmoca/P6-JSON-JWT.git",
+  "source-url": "https://github.com/raku-community-modules/JSON-JWT.git",
   "tags": [
     "JSON",
     "JWT"

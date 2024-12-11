@@ -4,7 +4,7 @@ use OpenSSL::Digest;
 use OpenSSL::RSATools;
 use Digest::HMAC;
 
-unit class JSON::JWT:ver<1.1.1>:auth<zef:raku-community-modules>;
+unit class JSON::JWT;
 
 multi method decode($jwt, :$alg where 'none') {
     my %pack := self!unpack($jwt);
@@ -139,7 +139,7 @@ Comments and Pull Requests are welcome.
 
 Copyright 2017 - 2018 Andrew Egeler
 
-Copyright 2019 - 2022 Raku Community
+Copyright 2019 - 2024 Raku Community
 
 All files in this repository are licensed under the terms of Create Commons
 License; for details please see the LICENSE file
